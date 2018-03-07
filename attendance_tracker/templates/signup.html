@@ -1,0 +1,70 @@
+{% load staticfiles %}
+{% load static %}
+
+<html>
+    <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link href="//fonts.googleapis.com/css?family=Times New Roman&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+         <title>Attendance Tracker Project </title>
+    </head>
+
+
+        <div class="page-header">
+
+
+        <h1><a href="/">Employee Attandance tracker</a></h1>
+    </div>
+
+				<table style="border-collapse: collapse; width:100%; background-color:white;margin-bottom:0;padding-bottom:0;width:96%;margin:auto;">
+					    <tr>
+					        			        <td>
+					        	<ul>
+					        		<li style="font-size: 13px;list-style-type: none;
+    float: left;margin: 0px 22px 16px 0px;"><a href="" style="text-decoration:none;color:#333;font-family: 'Roboto', sans-serif;font-family: 'Roboto', sans-serif;
+    font-size: 13px;"><a href="#" style="font-family: 'Roboto', sans-serif;font-size: 13px;color: #255388;margin-bottom: 0px;text-decoration:none;">Contact</a></li>
+					        		<li style="font-size: 13px;list-style-type: none;
+    float: left;margin: 0px 22px 16px 0px;"><a href="#" style="text-decoration:none;color:#333;font-family: 'Roboto', sans-serif;font-family: 'Roboto', sans-serif;
+    font-size: 13px;text-decoration:none;"><a href="#" style="font-family: 'Roboto', sans-serif;font-size: 13px;color: #255388;margin-bottom: 0px;text-decoration:none;">How it works</a></li>
+					        		<li style="font-size: 13px;list-style-type: none;
+    float: left;margin: 0px 22px 16px 0px;"><a href="#" style="text-decoration:none;color:#333;font-family: 'Roboto', sans-serif;font-family: 'Roboto', sans-serif;
+    font-size: 13px;text-decoration:none;"><a href="#" style="font-family: 'Roboto', sans-serif;font-size: 13px;color: #255388;margin-bottom: 0px;text-decoration:none;">About QuizBlog</a></li>
+					        	</ul>
+					        </td>
+					        <td>
+								<!--<a href="/signup/"><span class="glyphicon glyphicon-plus"></span>Signup</a>-->
+
+								<!--<a href="https://twitter.com/LoanAnytime"target="_blank"><img src="http://anytimeloan.in/media_cdn/notificationimages/tw-icon.png" style="width: 25px;margin-left: 2px;margin-bottom: 4px;"></a>-->
+								<!--<a href="https://plus.google.com/b/110175382799047854034/110175382799047854034" target="_blank"><img src="http://anytimeloan.in/media_cdn/notificationimages/gplus-icon.png" style="width: 25px;margin-left: 2px;margin-bottom: 4px;"></a>-->
+
+							</td>
+					    </tr>
+					</table>
+
+
+
+
+
+</style>
+<div class="container">
+  <h2>Sign up</h2>
+
+  <form method="post">
+    {% csrf_token %}
+    {% for field in form %}
+      <p>
+        {{ field.label_tag }}<br>
+        {{ field }}
+        {% if field.help_text %}
+          <small style="color: grey">{{ field.help_text }}</small>
+        {% endif %}
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+    {% endfor %}
+    <button type="submit">Sign up</button>
+  </form>
+</div>
+</html>

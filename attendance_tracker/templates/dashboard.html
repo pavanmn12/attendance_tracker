@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+
+</div>
+<div class="container">
+
+    <form method="POST" class="post-form" style="font-family: 'Roboto', sans-serif;font-size: 13px;color:#255388;">{% csrf_token %}
+
+
+        <label for="fdate">From Date: </label>
+        <input id="fdate" type="date" name="fdate"  required />
+
+         <label for="tdate">To Date: </label>
+        <input id="tdate" type="date" name="tdate"  required />
+
+        <button type="submit" class="save btn btn-default">Submit</button>
+    </form>
+    </div>
+
+
+
+
+{% endblock %}

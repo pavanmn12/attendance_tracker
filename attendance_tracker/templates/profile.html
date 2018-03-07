@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1><form action="/checkinn/new/" method="post">
+    {% csrf_token %}
+
+    <input type="submit" value="Checkinn" >
+
+</form></h1>
+
+<h1><form action="/checkout/new/" method="post">
+    {% csrf_token %}
+
+    <input type="submit" value="Checkout" >
+
+</form></h1>
+
+<h1><form action="/dashboard/" method="post">
+    {% csrf_token %}
+
+    <input type="submit" value="Dashboard" >
+
+</form></h1>
+
+{% endblock %}

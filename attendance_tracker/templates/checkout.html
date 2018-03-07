@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+
+</div>
+<div class="container">
+    <h1 style="font-family: 'Roboto', sans-serif;font-size:25px;color:#255388;">Enter details</h1>
+    <form method="POST" class="post-form" style="font-family: 'Roboto', sans-serif;font-size: 13px;color:#255388;">{% csrf_token %}
+        <!--{{ form.as_p }}-->
+
+        <label for="date">Date: </label>
+        <input id="date" type="date" name="date"  required />
+
+         <label for="checkout">Checkout Time: </label>
+        <input id="checkout" type="time" name="checkout"  required />
+
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+    </div>
+{% endblock %}

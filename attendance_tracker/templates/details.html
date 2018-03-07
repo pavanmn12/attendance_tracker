@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="container">
+<div class="table-responsive">
+    <h1 style="font-family: 'Roboto', sans-serif;font-size: 25px;color:#255388;">Your Attendance card:</h1>
+  <table class="table table-bordered" style= "width :100%;">
+<thead>
+        <tr class="text-center test">
+            <th style="font-family: 'Roboto', sans-serif;font-size: 20px;color:#255388;"><font size="2">Date</font></th>
+            <th style="font-family: 'Roboto', sans-serif;font-size: 20px;color:#255388;"><font size="2">Checked Inn</font></th>
+            <th style="font-family: 'Roboto', sans-serif;font-size: 20px;color:#255388;"><font size="2" >Checked Out</font></th>
+            <th style="font-family: 'Roboto', sans-serif;font-size: 20px;color:#255388;"><font size="2" >Hours Worked </font></th>
+           <th style="font-family: 'Roboto', sans-serif;font-size: 20px;color:#255388;"><font size="2" >Extended</font></th>
+           <th style="font-family: 'Roboto', sans-serif;font-size: 20px;color:#255388;"><font size="2" >Left Early </font></th>
+
+
+
+        </tr>
+
+    </thead>
+      {% for items in posts %}
+
+      <tr>
+         <td style="font-family: 'Roboto', sans-serif;font-size: 13px;color:#255388;">
+            {{items.date}}
+         </td>
+         <td  style="font-family: 'Roboto', sans-serif;font-size: 13px;color:#255388;">
+            {{items.checkinn}}
+         </td>
+         <td  style="font-family: 'Roboto', sans-serif;font-size: 13px;color:#255388;">
+            {{items.checkout}}
+         </td>
+         <td style="font-family: 'Roboto', sans-serif;font-size: 13px;color:#255388;">
+            {{items.worked_for}}
+         </td>
+         <td style="font-family: 'Roboto', sans-serif;font-size: 13px;color:#255388;">
+            {{items.extended1}}
+         </td>
+         <td style="font-family: 'Roboto', sans-serif;font-size: 13px;color:#255388;">
+            {{items.early}}
+         </td>
+
+      </tr>
+      {% endfor %}
+  </table>
+
+    <h1 style="font-family: 'Roboto', sans-serif;font-size: 20px;color:#255388;"><b>Total hours worked extra : {{plus}} </b></h1>
+    <h1 style="font-family: 'Roboto', sans-serif;font-size: 20px;color:#255388;"><b>Total hours came late/went early : {{minus}} </b></h1>
+    <h1 style="font-family: 'Roboto', sans-serif;font-size: 20px;color:#255388;"><b>Your Status: {{status}} </b></h1>
+</div>
+</div>
+<!--<p> Hours extended/delayed : {{sum}}</p>-->
+
+{% endblock %}

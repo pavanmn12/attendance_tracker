@@ -1,0 +1,62 @@
+{% load staticfiles %}
+{% load static %}
+
+<html>
+    <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link href="//fonts.googleapis.com/css?family=Times New Roman&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+         <title>Attendance Tracker Project </title>
+    </head>
+
+
+        <div class="page-header">
+            <!--<a href="" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>-->
+
+        <h1><a href="/">Employee Attandance tracker</a></h1>
+    </div>
+    <!--<div class="content container">-->
+       <!--&lt;!&ndash;<img src="{% static "images/images.jpg" %}" alt="My image"/>&ndash;&gt;-->
+        <!--<div class="row">-->
+            <!--<div class="col-md-8">-->
+				<table style="border-collapse: collapse; width:100%; background-color:#F0F3F4;margin-bottom:0;padding-bottom:0;width:96%;margin:auto;">
+					    <tr>
+					        <!--<td width="20%"><img src="{% static "images/quizimage.jpg" %}" al="atl" width="172"></a></td>-->
+					        <td>
+					        	<ul>
+					        		<li style="font-size: 13px;list-style-type: none;
+    float: left;margin: 0px 22px 16px 0px;"><a href="" style="text-decoration:none;color:#333;font-family: 'Roboto', sans-serif;font-family: 'Roboto', sans-serif;
+    font-size: 13px;"><a href="#" style="font-family: 'Roboto', sans-serif;font-size: 20px;color: #255388;margin-bottom: 0px;text-decoration:none;">Contact</a></li>
+					        		<li style="font-size: 13px;list-style-type: none;
+    float: left;margin: 0px 22px 16px 0px;"><a href="#" style="text-decoration:none;color:#333;font-family: 'Roboto', sans-serif;font-family: 'Roboto', sans-serif;
+    font-size: 13px;text-decoration:none;"><a href="#" style="font-family: 'Roboto', sans-serif;font-size: 20px;color: #255388;margin-bottom: 0px;text-decoration:none;">How it works</a></li>
+					        		<li style="font-size: 13px;list-style-type: none;
+    float: left;margin: 0px 22px 16px 0px;"><a href="#" style="text-decoration:none;color:#333;font-family: 'Roboto', sans-serif;font-family: 'Roboto', sans-serif;
+    font-size: 13px;text-decoration:none;"><a href="#" style="font-family: 'Roboto', sans-serif;font-size: 20px;color: #255388;margin-bottom: 0px;text-decoration:none;">About Employee Attendance Tracker</a></li>
+					        	</ul>
+					        </td>
+					        <td>
+								<!--<a href="/signup/"><span class="glyphicon glyphicon-plus"></span>Signup</a>-->
+								<a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp{{profile}}</a>&nbsp&nbsp&nbsp
+								<a href="/logout/"><span class="glyphicon glyphicon-log-out"></span>&nbspLogout</a>
+								<!--<a href="https://twitter.com/LoanAnytime"target="_blank"><img src="http://anytimeloan.in/media_cdn/notificationimages/tw-icon.png" style="width: 25px;margin-left: 2px;margin-bottom: 4px;"></a>-->
+								<!--<a href="https://plus.google.com/b/110175382799047854034/110175382799047854034" target="_blank"><img src="http://anytimeloan.in/media_cdn/notificationimages/gplus-icon.png" style="width: 25px;margin-left: 2px;margin-bottom: 4px;"></a>-->
+
+							</td>
+					    </tr>
+					</table>
+	<!--<style>-->
+	<!--body  {-->
+    <!--background-image: url("{% static "images/white.jpg" %}");-->
+    <!--background-color: white;-->
+<!--}-->
+<!--</style>-->
+
+    {% block content %}
+            {% endblock %}
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+</html>
